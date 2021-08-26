@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const App = () => {
+const App: FC = () => {
   return (
     <div>
-      <h1>Speakit</h1>
+      
     </div>
   );
 }
