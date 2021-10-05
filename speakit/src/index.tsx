@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
 import './firebase/config';
+import store from './store';
 
 const Global = createGlobalStyle`
 * {
@@ -14,9 +16,9 @@ const Global = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <React.Fragment>
+  <Provider store={store}>
     <Global />
     <App />
-  </React.Fragment>,
+  </Provider>,
   document.getElementById('root')
 );
